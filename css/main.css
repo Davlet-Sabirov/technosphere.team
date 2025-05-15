@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Arimo", sans-serif;
+}
+
+body img {
+    max-width: 100%;
+    height: auto;
+}
+
+body video {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+body a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+body a:hover {
+    color: #ff0000;
+}
+
+body ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 500;
+}
+
+
+/*--------------------- Navbar ---------------------*/
+
+
+nav .navbar-nav a {
+    font-size: 18px;
+}
+
+
+/*-- кнопка Burger --*/
+
+
+nav .navbar-toggler {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 22px;
+    filter: contrast(200%);
+}
+
+nav .navbar-toggler:focus,
+.btn-close:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/*--------------------- Hero ---------------------*/
+
+
+main .btn:hover::after {
+    content: '\f061';
+    font-family: FontAwesome;
+    font-size: 14px;
+    margin-left: 16px;
+    transition: .2s;
+}
+
+.btn-warning {
+    padding: 12px 34px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 100px;
+    border: none;
+}
+
+.btn-warning::after {
+    content: '\f061';
+    font-family: FontAwesome;
+    font-size: 14px;
+    margin-left: 14px;
+}
+
+.btn-warning:hover {
+    color: white;
+    background-color: #ff3131;
+}
+
+.btn-warning:hover::after {
+    content: '\f061';
+    font-family: FontAwesome;
+    font-size: 14px;
+    margin-left: 16px;
+    transition: .2s;
+}
+
+
+/*--------------------- Иконки ---------------------*/
+
+.best-icons {
+    background-image: url(/img-sys/hero-bg.jpg);
+}
+
+.best-icons img {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/*--------------------- Галерея ---------------------*/
+
+
+.gallery .img-block {
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px gainsboro;
+}
+
+.gallery .caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #e2e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    transform: translateY(70px);
+    transition: all 0.5s ease;
+}
+
+.gallery .img-block:hover .caption {
+    transform: translateY(0);
+}
+
+.gallery .img-block img {
+    transition: all .3s ease;
+}
+
+.gallery .img-block img:hover {
+    scale: 1.03;
+}
+
+
+@media (max-width: 991px) {
+    .img-fluid {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 991px) {
+    .img-fluid {
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+
+/*--------------------- Video ---------------------*/
+
+
+.arrows {
+    display: flex;
+    gap: 7rem;
+}
+
+.swiper-pagination {
+    bottom: 15px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: static !important;
+    top: auto !important;
+    width: auto !important;
+    height: auto !important;
+    margin-top: auto !important;
+}
+
+.swiper-button-prev {
+    background-image: url(/img-sys/icons/arrow.svg);
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 21px;
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.swiper-button-next {
+    background-image: url(/img-sys/icons/arrow.svg);
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 21px;
+    width: 50px !important;
+    height: 50px !important;
+    transform: rotate(180deg);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: whitesmoke;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none !important;
+}
+
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 100%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play-button::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+/* Скрытие кнопки при воспроизведении */
+.video.playing+.play-button {
+    display: none;
+}
+
+
+/*--------------------- Accordion ---------------------*/
+
+
+.accordion {
+    background-image: url(/img-sys/hero-bg.jpg);
+}
+
+.accordion .accordion-button {
+    --bs-accordion-bg: none;
+    --bs-accordion-active-bg: none;
+    --bs-accordion-btn-focus-box-shadow: none;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.accordion .accordion-button:hover {
+    color: #90973d;
+}
+
+.accordion .accordion-button.collapsed {
+    border: 1px solid black;
+}
+
+.accordion .accordion-item:has(.accordion-button:not(.collapsed)) {
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+}
+
+.accordion .accordion-button:not(.collapsed) {
+    box-shadow: none;
+    color: #90973d;
+}
+
+
+/*--------------------- Отзывы клиентов ---------------------*/
+
+.customers .cust-cards {
+    box-shadow: 2px 2px 4px gainsboro;
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+}
+
+.customers a {
+    text-decoration: underline;
+}
+
+.customers .title a::after {
+    content: '_\f105';
+    font-family: FontAwesome;
+    font-size: 10px;
+}
+
+.customers .c-body p {
+    color: grey;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.customers .img-container {
+    overflow: hidden;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+}
+
+/*--------------------- Form ---------------------*/
+
+.form {
+    background-image: url(/img-sys/hero-bg.jpg);
+}
+
+.form .btn-success {
+    background-color: #ff0000;
+    padding: 13px 30px;
+    border-radius: 100px;
+    border: none;
+}
+
+.form .btn-success:hover {
+    background-color: #ff3131;
+}
+
+
+/*--------------------- Footer ---------------------*/
+
+
+.footer .bi-instagram {
+    color: rgb(224, 71, 166);
+}
+
+.footer .bi-telegram {
+    color: rgb(0, 183, 255);
+}
+
+.footer .bi-facebook {
+    color: rgb(54, 66, 177);
+}
+
+.footer .bi-telephone-fill {
+    color: rgb(128, 197, 0);
+}
+
+
+/*--------------------- GoTop ---------------------*/
+
+
+.go_top {
+    position: fixed;
+    bottom: -60px;
+    right: 40px;
+    background: #ff0000;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.go_top:hover {
+    background: #ff3131;
+}
+
+.go_top.active {
+    bottom: 50px;
+    transition: 0.2s linear;
+}
+
+
+/*------------------ Политика конфиденциальности ------------------*/
+
+
+.breadcrumbs ul li {
+    margin-right: 8px;
+}
+
+.breadcrumbs ul li a {
+    display: flex;
+    align-items: center;
+    color: #777;
+}
+
+.breadcrumbs ul li a:hover {
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.breadcrumbs ul li a::after {
+    content: '\f105';
+    font-family: FontAwesome;
+    font-size: 10px;
+    margin-left: 8px;
+}
+
+.politics h5 {
+    margin: 40px 0;
+}
+
+.politics .wp-block-table th,
+.politics .wp-block-table td {
+    border: 1px solid;
+    padding: .5em;
+}

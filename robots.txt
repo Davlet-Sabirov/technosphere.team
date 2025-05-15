@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Allow: /img-sys/favicon.svg
+Allow: /favicon.svg
+
+Sitemap: https://kupipodarki.uz/sitemap.xml
