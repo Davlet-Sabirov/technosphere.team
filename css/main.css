@@ -33,7 +33,7 @@ body a {
 }
 
 body a:hover {
-    color: #ff0000;
+    color: #231f55;
 }
 
 body ul {
@@ -88,7 +88,7 @@ main .btn:hover::after {
 
 .btn-warning {
     padding: 12px 34px;
-    background-color: #ff0000;
+    background-color: #231f55;
     color: white;
     border-radius: 100px;
     border: none;
@@ -103,7 +103,7 @@ main .btn:hover::after {
 
 .btn-warning:hover {
     color: white;
-    background-color: #ff3131;
+    background-color: #241e79;
 }
 
 .btn-warning:hover::after {
@@ -346,14 +346,14 @@ main .btn:hover::after {
 }
 
 .form .btn-success {
-    background-color: #ff0000;
+    background-color: #231f55;
     padding: 13px 30px;
     border-radius: 100px;
     border: none;
 }
 
 .form .btn-success:hover {
-    background-color: #ff3131;
+    background-color: #241e79;
 }
 
 
@@ -361,19 +361,19 @@ main .btn:hover::after {
 
 
 .footer .bi-instagram {
-    color: rgb(224, 71, 166);
+    color: #231f55;
 }
 
 .footer .bi-telegram {
-    color: rgb(0, 183, 255);
+    color: #231f55;
 }
 
 .footer .bi-facebook {
-    color: rgb(54, 66, 177);
+    color: #231f55;
 }
 
 .footer .bi-telephone-fill {
-    color: rgb(128, 197, 0);
+    color: #231f55;
 }
 
 
@@ -384,7 +384,7 @@ main .btn:hover::after {
     position: fixed;
     bottom: -60px;
     right: 40px;
-    background: #ff0000;
+    background: #231f55;
     width: 60px;
     height: 60px;
     cursor: pointer;
@@ -392,7 +392,7 @@ main .btn:hover::after {
 }
 
 .go_top:hover {
-    background: #ff3131;
+    background: #241e79;
 }
 
 .go_top.active {
