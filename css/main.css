@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -41,19 +42,63 @@ body ul {
     padding-left: 0;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    font-weight: 500;
+body h2 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 800;
+}
+
+.container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+/*--------------------- Home ---------------------*/
+
+
+.home {
+    background: url(/img-sys/bg-hero.webp) no-repeat center/cover;
+    min-height: 100vh;
+    color: white;  
+}
+
+.home .container {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
 }
 
 
 /*--------------------- Navbar ---------------------*/
 
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar .container {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
 
 nav .navbar-nav a {
     font-size: 18px;
+    color: white;
+}
+
+nav .navbar-nav a:hover {
+    font-size: 18px;
+    color: #62b6f1;
+}
+
+.offcanvas {
+    color: white;
+    background: #231f55;
+}
+
+.btn-close {
+    filter: invert(1);
 }
 
 
@@ -78,95 +123,107 @@ nav .navbar-toggler:focus,
 /*--------------------- Hero ---------------------*/
 
 
-main .btn:hover::after {
-    content: '\f061';
-    font-family: FontAwesome;
-    font-size: 14px;
-    margin-left: 16px;
-    transition: .2s;
+.hero {
+    min-height: 100vh;
 }
 
-.btn-warning {
-    padding: 12px 34px;
-    background-color: #231f55;
+h1 {
+    font-weight: 900;
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    margin-bottom: 50px;
+}
+
+.btn-hero {
+    font-size: 23px;
     color: white;
-    border-radius: 100px;
-    border: none;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 15px 30px;
 }
 
-.btn-warning::after {
-    content: '\f061';
-    font-family: FontAwesome;
-    font-size: 14px;
-    margin-left: 14px;
-}
-
-.btn-warning:hover {
+.btn-hero:hover {
     color: white;
-    background-color: #241e79;
-}
-
-.btn-warning:hover::after {
-    content: '\f061';
-    font-family: FontAwesome;
-    font-size: 14px;
-    margin-left: 16px;
-    transition: .2s;
+    background-color: #62b6f1;
+    border-color: #62b6f1;
 }
 
 
-/*--------------------- Иконки ---------------------*/
+/*--------------------- Услуги ---------------------*/
 
-.best-icons {
-    background-image: url(/img-sys/hero-bg.jpg);
+
+.services {
+    padding-top: 50px;
 }
 
-.best-icons img {
-    width: 210px;
-    height: 210px;
-    border-radius: 50%;
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+.services-title {
+    margin-bottom: 50px;
+}
+
+.services .img-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.services .img-block:hover img {
+    width: 102%;
+    height: 102%;
 }
 
 
-/*--------------------- Галерея ---------------------*/
-
-
-.gallery .img-block {
+.services .img-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    position: relative;
-    border-radius: 20px;
     box-shadow: 2px 2px 4px gainsboro;
+    height: 300px;
+    position: relative;
 }
 
-.gallery .caption {
+.services .img-block::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(11, 11, 44, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.8;
+    transition: .3s;
+}
+
+.services .img-block:hover::after {
+    opacity: 1;
+}
+
+.services .caption {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 70px;
-    background: rgba(0, 0, 0, 0.7);
+    height: 80px;
     color: #e2e2e2;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 10px 20px;
-    transform: translateY(70px);
-    transition: all 0.5s ease;
+    z-index: 1;
 }
 
-.gallery .img-block:hover .caption {
-    transform: translateY(0);
+.services .caption h6 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    transition: 0.3s ease;
 }
 
-.gallery .img-block img {
-    transition: all .3s ease;
+.services .img-block:hover .caption h6 {
+    transform: translateY(-5px);
 }
-
-.gallery .img-block img:hover {
-    scale: 1.03;
-}
-
 
 @media (max-width: 991px) {
     .img-fluid {
@@ -180,103 +237,88 @@ main .btn:hover::after {
 @media (min-width: 991px) {
     .img-fluid {
         width: 100%;
-        height: 700px;
+        height: 300px;
         object-fit: cover;
         border-radius: 10px;
     }
 }
 
 
-/*--------------------- Video ---------------------*/
+/*--------------------- Иконки ---------------------*/
 
 
-.arrows {
+.best-icons i {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #231f55;
+}
+
+.best-icons h4 {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+
+/*--------------------- About us ---------------------*/
+
+.about-us {
+    background: url(/img-sys/bg-about-us.webp) no-repeat center/cover;
+    width: 100%;
+    min-height: 500px;
+    color: white;
     display: flex;
-    gap: 7rem;
-}
-
-.swiper-pagination {
-    bottom: 15px !important;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    position: static !important;
-    top: auto !important;
-    width: auto !important;
-    height: auto !important;
-    margin-top: auto !important;
-}
-
-.swiper-button-prev {
-    background-image: url(/img-sys/icons/arrow.svg);
-    border-radius: 100px;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 21px;
-    width: 50px !important;
-    height: 50px !important;
-}
-
-.swiper-button-next {
-    background-image: url(/img-sys/icons/arrow.svg);
-    border-radius: 100px;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 21px;
-    width: 50px !important;
-    height: 50px !important;
-    transform: rotate(180deg);
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    background-color: whitesmoke;
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-    display: none !important;
-}
-
-
-.play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 100%;
-    border: 1px solid white;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.play-button::before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-left: 20px solid white;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+.about-us-text h2 {
+    padding-bottom: 50px;
+    color: #62b6f1;
 }
 
-/* Скрытие кнопки при воспроизведении */
-.video.playing+.play-button {
-    display: none;
+.about-us-text {
+    margin-left: auto;
 }
 
+
+/*--------------------- Clients ---------------------*/
+
+
+.clients h2 {
+    margin-bottom: 5rem;
+}
+
+.clients .logo-group {
+    gap: 3rem 0;
+}
+
+.clients .logo-item {
+    text-align: center;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    filter: grayscale(100%);
+}
+
+.clients .logo-item:hover {
+    filter: grayscale(0%);
+}
+
+@media (max-width: 767px) {
+    .clients .clients-hr {
+        display: none;
+    }
+}
 
 /*--------------------- Accordion ---------------------*/
 
 
 .accordion {
     background-image: url(/img-sys/hero-bg.jpg);
+}
+
+.accordion-title {
+    margin-bottom: 50px;
 }
 
 .accordion .accordion-button {
@@ -288,7 +330,7 @@ main .btn:hover::after {
 }
 
 .accordion .accordion-button:hover {
-    color: #90973d;
+    color: #62b6f1;
 }
 
 .accordion .accordion-button.collapsed {
@@ -302,78 +344,89 @@ main .btn:hover::after {
 
 .accordion .accordion-button:not(.collapsed) {
     box-shadow: none;
-    color: #90973d;
+    color: #62b6f1;
 }
 
-
-/*--------------------- Отзывы клиентов ---------------------*/
-
-.customers .cust-cards {
-    box-shadow: 2px 2px 4px gainsboro;
-    border: 1px solid gainsboro;
-    border-radius: 20px;
-}
-
-.customers a {
-    text-decoration: underline;
-}
-
-.customers .title a::after {
-    content: '_\f105';
-    font-family: FontAwesome;
-    font-size: 10px;
-}
-
-.customers .c-body p {
-    color: grey;
-    cursor: pointer;
-    margin-top: 5px;
-}
-
-.customers .img-container {
-    overflow: hidden;
-    border-radius: 100px;
-    width: 100px;
-    height: 100px;
-    padding: 0;
-    margin: 0;
-}
 
 /*--------------------- Form ---------------------*/
+
 
 .form {
     background-image: url(/img-sys/hero-bg.jpg);
 }
 
-.form .btn-success {
-    background-color: #231f55;
+.form .btn-form {
+    display: flex;
+    justify-content: center;
     padding: 13px 30px;
+    border: 1px solid #231f55;
     border-radius: 100px;
-    border: none;
+    width: 100%;
+    margin-bottom: 40px;
+    transition: 0.3s;
 }
 
-.form .btn-success:hover {
-    background-color: #241e79;
+.form .btn-form:hover {
+    background-color: #231f55;
+    color: white;
+}
+
+.form .img-form {
+    border-radius: 30px;
+    margin-bottom: 40px;
+}
+
+.form .img-form img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
 }
 
 
 /*--------------------- Footer ---------------------*/
 
 
-.footer .bi-instagram {
-    color: #231f55;
+.footer .container {
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
-.footer .bi-telegram {
-    color: #231f55;
+.footer {
+    background-color: #231f55;
+    color: white;
 }
 
-.footer .bi-facebook {
-    color: #231f55;
+.footer a {
+    color: white;
 }
 
-.footer .bi-telephone-fill {
-    color: #231f55;
+.footer a:hover {
+    color: #62b6f1;
+}
+
+.footer .footer-title {
+    color: #62b6f1;
+}
+
+.footer-text {
+    font-size: 13px;
+}
+
+.footer .bi-instagram:hover {
+    color: #62b6f1;
+}
+
+.footer .bi-telegram:hover {
+    color: #62b6f1;
+}
+
+.footer .bi-facebook:hover {
+    color: #62b6f1;
+}
+
+.footer .bi-telephone-fill:hover {
+    color: #62b6f1;
 }
 
 
@@ -384,15 +437,17 @@ main .btn:hover::after {
     position: fixed;
     bottom: -60px;
     right: 40px;
-    background: #231f55;
     width: 60px;
     height: 60px;
     cursor: pointer;
     z-index: 999;
+    transform: rotate(270deg);
+    background: rgb(228, 228, 228);
 }
 
 .go_top:hover {
-    background: #241e79;
+    background: #62b6f1;
+    border: 0;
 }
 
 .go_top.active {
