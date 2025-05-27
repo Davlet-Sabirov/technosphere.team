@@ -57,9 +57,9 @@ body h2 {
 
 
 .home {
-    background: url(/img-sys/bg-hero.webp) no-repeat center/cover;
-    min-height: 100vh;
-    color: white;  
+    background: url(/img-sys/services/bg-hero-ser-3.webp) no-repeat center/cover;
+    height: 60vh;
+    color: white;
 }
 
 .home .container {
@@ -124,13 +124,14 @@ nav .navbar-toggler:focus,
 
 
 .hero {
-    min-height: 100vh;
+    min-height: 60vh;
 }
 
 h1 {
     font-weight: 900;
     font-size: clamp(1.5rem, 5vw, 3.5rem);
-    margin-bottom: 50px;
+    margin-top: 2rem;
+    margin-bottom: 0px;
 }
 
 .btn-hero {
