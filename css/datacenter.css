@@ -134,224 +134,61 @@ h1 {
     margin-bottom: 0px;
 }
 
-.btn-hero {
-    font-size: 23px;
-    color: white;
-    border: 2px solid white;
-    border-radius: 50px;
-    padding: 15px 30px;
+
+/*--------------------- Section-1 ---------------------*/
+
+
+.section-1 .container {
+    margin-top: 5rem;
 }
 
-.btn-hero:hover {
-    color: white;
-    background-color: #62b6f1;
-    border-color: #62b6f1;
+.sec-1-title h2 {
+    text-align: center;
 }
 
-
-/*--------------------- Services ---------------------*/
-
-
-.services {
-    padding-top: 50px;
-}
-
-.services-title {
-    margin-bottom: 50px;
-}
-
-.services .img-block img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: 0.3s ease;
-}
-
-.services .img-block:hover img {
-    width: 102%;
-    height: 102%;
-}
-
-
-.services .img-block {
+.checkbox .check {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    box-shadow: 2px 2px 4px gainsboro;
-    height: 300px;
-    position: relative;
+    justify-content: space-between;
 }
 
-.services .img-block::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(11, 11, 44, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    opacity: 0.8;
-    transition: .3s;
+.checkbox .check i {
+    font-size: 1.77rem;
+    padding-right: 1rem;
 }
 
-.services .img-block:hover::after {
-    opacity: 1;
+.checkbox .check p {
+    font-size: 1.3rem;
 }
 
-.services .caption {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 180px;
-    color: #e2e2e2;
-    padding: 10px 20px;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+
+/*--------------------- Section-2 ---------------------*/
+
+
+.section-2 h2 {
+    margin-bottom: 2rem;
 }
 
-.services .caption h6 {
+.section-2 .imgbox-item {
+    padding-top: 2rem;
+}
+
+.section-2 h4 {
     font-size: 1.5rem;
-    font-weight: 700;
-    transition: 0.3s ease;
-}
-
-.services .img-block:hover .caption h6 {
-    transform: translateY(-5px);
-}
-
-@media (max-width: 991px) {
-    .img-fluid {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-}
-
-@media (min-width: 991px) {
-    .img-fluid {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
+    font-weight: 600;
+    margin-top: 1.5rem;
+    text-align: center;
 }
 
 
-/*--------------------- Icons ---------------------*/
+/*--------------------- Section-3 ---------------------*/
 
-
-.best-icons i {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    color: #231f55;
+.section-3 h2 {
+    padding-bottom: 2rem;
 }
 
-.best-icons h4 {
-    font-size: 1.6rem;
-    font-weight: 800;
+.section-3 p {
+    
 }
-
-
-/*--------------------- About us ---------------------*/
-
-.about-us {
-    background: url(/img-sys/bg-about-us.webp) no-repeat center/cover;
-    width: 100%;
-    min-height: 500px;
-    color: white;
-    display: flex;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.about-us-text h2 {
-    padding-bottom: 50px;
-    color: #62b6f1;
-}
-
-.about-us-text {
-    margin-left: auto;
-}
-
-
-/*--------------------- Clients ---------------------*/
-
-
-.clients {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    overflow-x: hidden;
-}
-
-.clients h2 {
-    margin-bottom: 5rem;
-}
-
-.clients .slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(250px * 24);
-}
-
-.clients .slider-items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: scroll 40s linear infinite;
-}
-
-@keyframes scroll {
-    100% {
-        transform: translateX(calc(-250px * 12));
-    }
-}
-
-
-/*--------------------- Accordion ---------------------*/
-
-
-.accordion {
-    background-image: url(/img-sys/hero-bg.jpg);
-}
-
-.accordion-title {
-    margin-bottom: 50px;
-}
-
-.accordion .accordion-button {
-    --bs-accordion-bg: none;
-    --bs-accordion-active-bg: none;
-    --bs-accordion-btn-focus-box-shadow: none;
-    font-size: 19px;
-    font-weight: 500;
-}
-
-.accordion .accordion-button:hover {
-    color: #62b6f1;
-}
-
-.accordion .accordion-button.collapsed {
-    border: 1px solid black;
-}
-
-.accordion .accordion-item:has(.accordion-button:not(.collapsed)) {
-    border: 2px solid black;
-    box-shadow: 4px 4px black;
-}
-
-.accordion .accordion-button:not(.collapsed) {
-    box-shadow: none;
-    color: #62b6f1;
-}
-
 
 /*--------------------- Form ---------------------*/
 
@@ -377,7 +214,6 @@ h1 {
 }
 
 .form .img-form {
-    border-radius: 30px;
     margin-bottom: 40px;
 }
 
@@ -385,7 +221,7 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 30px;
+    border-radius: 10px;
 }
 
 
