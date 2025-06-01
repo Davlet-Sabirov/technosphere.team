@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     padding: 0;
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: "Arimo", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 body img {
@@ -44,7 +44,7 @@ body ul {
 
 body h2 {
     font-size: clamp(2rem, 5vw, 2.5rem);
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .container {
@@ -83,12 +83,11 @@ body h2 {
 }
 
 nav .navbar-nav a {
-    font-size: 18px;
+    font-size: 16px;
     color: white;
 }
 
 nav .navbar-nav a:hover {
-    font-size: 18px;
     color: #62b6f1;
 }
 
@@ -128,190 +127,73 @@ nav .navbar-toggler:focus,
 }
 
 h1 {
-    font-weight: 900;
+    font-weight: 600;
     font-size: clamp(1.5rem, 5vw, 3.5rem);
     margin-top: 2rem;
     margin-bottom: 0px;
 }
 
-.btn-hero {
-    font-size: 23px;
-    color: white;
-    border: 2px solid white;
-    border-radius: 50px;
-    padding: 15px 30px;
+
+/*--------------------- Section-1 ---------------------*/
+
+
+.section-1 .container {
+    margin-top: 5rem;
 }
 
-.btn-hero:hover {
-    color: white;
-    background-color: #62b6f1;
-    border-color: #62b6f1;
+.sec-1-title h2 {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-
-/*--------------------- Services ---------------------*/
-
-
-.services {
-    padding-top: 50px;
-}
-
-.services-title {
-    margin-bottom: 50px;
-}
-
-.services .img-block img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: 0.3s ease;
-}
-
-.services .img-block:hover img {
-    width: 102%;
-    height: 102%;
-}
-
-
-.services .img-block {
+.checkbox .check {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    box-shadow: 2px 2px 4px gainsboro;
-    height: 300px;
-    position: relative;
 }
 
-.services .img-block::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(11, 11, 44, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    opacity: 0.8;
-    transition: .3s;
+.checkbox .check i {
+    font-size: 1.77rem;
+    padding-right: 1rem;
 }
 
-.services .img-block:hover::after {
-    opacity: 1;
-}
-
-.services .caption {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 180px;
-    color: #e2e2e2;
-    padding: 10px 20px;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.services .caption h6 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    transition: 0.3s ease;
-}
-
-.services .img-block:hover .caption h6 {
-    transform: translateY(-5px);
-}
-
-@media (max-width: 991px) {
-    .img-fluid {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-}
-
-@media (min-width: 991px) {
-    .img-fluid {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
+.checkbox .check p {
+    font-size: 1.2rem;
+    text-align: start;
 }
 
 
-/*--------------------- Icons ---------------------*/
+/*--------------------- Section-2 ---------------------*/
 
 
-.best-icons i {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    color: #231f55;
+.section-2 h2 {
+    margin-bottom: 2rem;
 }
 
-.best-icons h4 {
-    font-size: 1.6rem;
-    font-weight: 800;
+.section-2 .imgbox-item {
+    padding-top: 2rem;
 }
 
-
-/*--------------------- About us ---------------------*/
-
-.about-us {
-    background: url(/img-sys/bg-about-us.webp) no-repeat center/cover;
-    width: 100%;
-    min-height: 500px;
-    color: white;
-    display: flex;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.about-us-text h2 {
-    padding-bottom: 50px;
-    color: #62b6f1;
-}
-
-.about-us-text {
-    margin-left: auto;
+.section-2 h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    text-align: center;
 }
 
 
-/*--------------------- Clients ---------------------*/
+/*--------------------- Section-3 ---------------------*/
 
 
-.clients {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    overflow-x: hidden;
+.section-3 {
+    background: rgb(241, 243, 245);
 }
 
-.clients h2 {
-    margin-bottom: 5rem;
+.section-3 h2 {
+    padding-bottom: 2rem;
+    text-align: center;
 }
 
-.clients .slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(250px * 24);
-}
-
-.clients .slider-items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: scroll 40s linear infinite;
-}
-
-@keyframes scroll {
-    100% {
-        transform: translateX(calc(-250px * 12));
-    }
+.section-3 p {
+    text-align: center;
 }
 
 

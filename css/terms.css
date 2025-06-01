@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+body img {
+    max-width: 100%;
+    height: auto;
+}
+
+body video {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+body a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+body a:hover {
+    color: #231f55;
+}
+
+body ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+body h2 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+}
+
+.container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+/*--------------------- Navbar ---------------------*/
+
+.navbar {
+    background: #231f55;
+}
+
+.navbar .container {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+nav .navbar-nav a {
+    font-size: 16px;
+    color: white;
+}
+
+nav .navbar-nav a:hover {
+    color: #62b6f1;
+}
+
+.offcanvas {
+    color: white;
+    background: #231f55;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+
+/*-- кнопка Burger --*/
+
+
+nav .navbar-toggler {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 22px;
+    filter: contrast(200%);
+}
+
+nav .navbar-toggler:focus,
+.btn-close:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/*------------------ Terms ------------------*/
+
+
+.breadcrumbs ul li {
+    margin-right: 8px;
+}
+
+.breadcrumbs ul li a {
+    display: flex;
+    align-items: center;
+    color: #777;
+}
+
+.breadcrumbs ul li a:hover {
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.breadcrumbs ul li a::after {
+    content: '\f105';
+    font-family: FontAwesome;
+    font-size: 10px;
+    margin-left: 8px;
+}
+
+.politics h5 {
+    margin: 40px 0;
+}
+
+.politics .wp-block-table th,
+.politics .wp-block-table td {
+    border: 1px solid;
+    padding: .5em;
+}
+
+
+/*--------------------- Footer ---------------------*/
+
+
+.footer .container {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.footer {
+    background-color: #231f55;
+    color: white;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: #62b6f1;
+}
+
+.footer .footer-title {
+    color: #62b6f1;
+}
+
+.footer-text {
+    font-size: 13px;
+}
+
+.footer .bi-instagram:hover {
+    color: #62b6f1;
+}
+
+.footer .bi-telegram:hover {
+    color: #62b6f1;
+}
+
+.footer .bi-facebook:hover {
+    color: #62b6f1;
+}
+
+.footer .bi-telephone-fill:hover {
+    color: #62b6f1;
+}
+
+
+/*--------------------- GoTop ---------------------*/
+
+
+.go_top {
+    position: fixed;
+    bottom: -60px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 999;
+    transform: rotate(270deg);
+    background: rgb(228, 228, 228);
+}
+
+.go_top:hover {
+    background: #62b6f1;
+    border: 0;
+}
+
+.go_top.active {
+    bottom: 50px;
+    transition: 0.2s linear;
+}
