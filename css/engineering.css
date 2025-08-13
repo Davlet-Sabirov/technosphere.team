@@ -199,10 +199,6 @@ h1 {
 /*--------------------- Accordion ---------------------*/
 
 
-.accordion {
-    background-image: url(/img-sys/hero-bg.jpg);
-}
-
 .accordion-title {
     margin-bottom: 50px;
 }
@@ -236,10 +232,6 @@ h1 {
 
 /*--------------------- Form ---------------------*/
 
-
-.form {
-    background-image: url(/img-sys/hero-bg.jpg);
-}
 
 .form .btn-form {
     display: flex;
